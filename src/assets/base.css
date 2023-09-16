@@ -1,0 +1,125 @@
+@import './JekoFont.css';
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400;1,600;1,700;1,800&family=Rubik:wght@300&display=swap');
+
+/* Action Network/VueJS Color Palette */
+:root {
+  --an-c-white: #fffef7;
+  --vt-c-white-soft: #f8f8f8;
+  --vt-c-white-mute: #f2f2f2;
+
+  --vt-c-black: #020a1b;
+  --vt-c-black-soft: #0f1626;
+  --vt-c-black-mute: #1e2534;
+
+  --an-darkblue: #182a51;
+  --an-gold: #e9b11c;
+  --an-lightGold: #ffff87;
+  
+  --banner-aspect-ratio-h: 1000;
+  --banner-aspect-ratio-w: 250;
+
+  --vt-c-divider-light-1: rgba(60, 60, 60, 0.29);
+  --vt-c-divider-light-2: rgba(60, 60, 60, 0.12);
+  --vt-c-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --vt-c-divider-dark-2: #303644;
+
+  --vt-c-text-light-1: var(--an-darkblue);
+  --vt-c-text-light-2: rgba(60, 60, 60, 0.66);
+  --vt-c-text-dark-1: var(--an-c-white);
+  --vt-c-text-dark-2: var(--an-c-white);
+}
+
+/* semantic color variables for this project */
+:root {
+  --gradient-background: linear-gradient(0.25turn, var(--vt-c-white), var(--vt-c-white-soft));
+  --color-background: var(--vt-c-white);
+  --color-background-soft: var(--vt-c-white-soft);
+  --color-background-mute: var(--vt-c-white-mute);
+  --form-back-color: var(--vt-c-white-mute);
+    --form-border-color: var(--vt-c-white-mute);
+
+
+  --input-focus-color: var(--an-gold);
+  --color-border: var(--vt-c-divider-light-2);
+  --color-border-hover: var(--vt-c-divider-light-1);
+
+  
+
+
+  --color-heading: var(--vt-c-text-light-1);
+  --color-text: var(--vt-c-text-light-1);
+
+  --primary-button: var(--an-gold);
+  --secondary-button: var(--an-darkblue);
+  --button-hover-back-color: var(--an-lightGold)
+
+
+  --section-gap: 160px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --gradient-background: linear-gradient(0.25turn, var(--vt-c-black), var(--vt-c-black-mute));
+    --color-background: var(--vt-c-black);
+    --color-background-soft: var(--vt-c-black-soft);
+    --color-background-mute: var(--vt-c-black-mute);
+    --form-back-color: var(--vt-c-black-mute);
+    --form-border-color: var(--vt-c-black-mute);
+
+
+    --input-focus-color: var(--an-gold);
+    --color-border: var(--vt-c-divider-dark-2);
+    --color-border-hover: var(--vt-c-divider-dark-1);
+
+    --color-heading: var(--vt-c-text-dark-1);
+    --color-text: var(--vt-c-text-dark-2);
+
+    --primary-button: var(--an-gold);
+    --secondary-button: var(--an-lightGold);
+    --button-hover-back-color: var(--an-lightGold)
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  font-weight: normal;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--color-text);
+  background: var(--gradient-background);
+  transition:
+    color 0.5s,
+    background-color 0.5s;
+  line-height: 1.6;
+  font-family:
+    'Inter',
+    -apple-system,
+    BlinkMacSystemFont,
+    'jeko_demomedium',
+    'Segoe UI',
+    Roboto,
+    Oxygen,
+    Ubuntu,
+    Cantarell,
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  font-size: 15px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1,h2,h3,h4,h5,h6{
+  font-weight: 700;
+}
+
+hr{
+  background: var(--color-border);
+}
